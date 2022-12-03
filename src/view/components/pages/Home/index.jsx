@@ -4,6 +4,7 @@ import Header from "../../sections/Header";
 import styles from "./index.module.scss";
 
 const Home = () => {
+  
   return (
     <div className={styles.root}>
       <Header />
