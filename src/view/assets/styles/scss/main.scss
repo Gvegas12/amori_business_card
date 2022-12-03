@@ -1,0 +1,51 @@
+@import url("../fonts.css");
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: "NeueHaasUnica", sans-serif;
+}
+
+body {
+  background-color: $main--color-light;
+}
+
+.container {
+  max-width: $container--width;
+  margin: 0 auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.h1-name {
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.hover-container {
+  $duration: 0.3s;
+
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgba($color: #000000, $alpha: 0.1);
+  transition-property: background-color, color;
+  transition-duration: $duration;
+  transition-timing-function: ease;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: white;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+  }
+}
