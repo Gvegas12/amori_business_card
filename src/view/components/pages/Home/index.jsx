@@ -1,33 +1,50 @@
 import React from "react";
-import Header from "../../sections/Header";
 
 import styles from "./index.module.scss";
 
+const data = [
+  {
+    text: "Telegram",
+    path: "",
+  },
+  {
+    text: "Instagram",
+    path: "",
+  },
+  {
+    text: "Vk",
+    path: "",
+  },
+  {
+    text: "Еще что то",
+    path: "",
+  },
+];
+
 const Home = () => {
-  
   return (
-    <div className={styles.root}>
-      <Header />
-      <div className={styles.wrapper}>
-        <div className={styles.left}>
-          <div className="container">
-            <p>
-              The hour of departure has arrived, and we go our separate ways, I
-              to die, and you to live. Which of these two is better only God
-              knows.
-            </p>
+    <div className="container">
+      <div className={styles.root}>
+        <div className={styles.left}></div>
+        <div className={styles.middle}>
+          <div className={styles.titleContainer}>
+            <h1 className="h1-name">
+              <span>Amori Salvatore</span>
+            </h1>
           </div>
-          <div className={styles.img}></div>
+          <div className={styles.list}>
+            <ul>
+              {data.map(({ text, path }, i) => (
+                <li key={i}>
+                  <a className="hover-container" href={path}>
+                    {text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
-        <div className={styles.right}>
-          <div className={styles.top}>
-            <div className={styles.img}></div>
-            <h3>Heading 3</h3>
-          </div>
-          <div className={styles.bottom}>
-            <div className={styles.img}></div>
-          </div>
-        </div>
+        <div className={styles.right}></div>
       </div>
     </div>
   );
