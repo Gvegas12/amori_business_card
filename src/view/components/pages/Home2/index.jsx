@@ -27,17 +27,9 @@ const data = [
 ];
 
 const Home2 = () => {
-  const [disable, setDisable] = React.useState(false);
-
-  React.useEffect(() => {
-    if (window.location.pathname === HOME_ROUTE2) {
-      setDisable(true);
-    }
-  }, []);
-
   return (
     <div className="container">
-      <div ref={rootRef} className={styles.root}>
+      <div className={styles.root}>
         <div className={styles.left}>
           <Link className="hover-container" to={HOME_ROUTE}>
             var 1
@@ -62,11 +54,9 @@ const Home2 = () => {
           </div>
         </div>
         <div className={styles.right}>
-          {!disable && (
-            <Link className="hover-container" to={HOME_ROUTE2}>
-              var 2
-            </Link>
-          )}
+          <Link className="hover-container" to={HOME_ROUTE2}>
+            var 2
+          </Link>
         </div>
       </div>
     </div>
