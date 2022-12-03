@@ -5,47 +5,45 @@ import styles from "./index.module.scss";
 const data = [
   {
     text: "Telegram",
-    path: "",
+    path: "https://t.me/kitsumori",
   },
   {
     text: "Instagram",
-    path: "",
+    path: "https://instagram.com/piercingbyamori?igshid=ZDdlNDJhZDc=",
   },
   {
-    text: "Vk",
-    path: "",
+    text: "VK Личный аккаунт",
+    path: "https://vk.com/kitsumorri",
   },
   {
-    text: "Еще что то",
-    path: "",
+    text: "VK Сообщество",
+    path: "https://vk.com/amori_salvatore",
   },
 ];
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className={styles.root}>
-        <div className={styles.left}></div>
-        <div className={styles.middle}>
-          <div className={styles.titleContainer}>
-            <h1 className="h1-name">
-              <span>Amori Salvatore</span>
-            </h1>
-          </div>
-          <div className={styles.list}>
-            <ul>
-              {data.map(({ text, path }, i) => (
-                <li key={i}>
-                  <a className="hover-container" href={path}>
-                    {text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+    <div className={styles.root}>
+      <div className={styles.left}></div>
+      <div className={styles.middle}>
+        <div className={styles.titleContainer}>
+          <h1 className="h1-name">
+            <span>Amori Salvatore</span>
+          </h1>
         </div>
-        <div className={styles.right}></div>
+        <div className={styles.list}>
+          <ul>
+            {data.map(({ text, path }, i) => (
+              <li key={i}>
+                <a className="hover-container" href={path}>
+                  {text}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
+      <div className={styles.right}></div>
     </div>
   );
 };

@@ -2,8 +2,8 @@
 
 .root {
   padding: 50px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   & > * {
     flex-grow: 1;
@@ -40,8 +40,12 @@
           .hover-container {
             display: inline-block;
             min-width: 100%;
-            font-size: 2.1rem;
             font-weight: 300;
+            font-size: 2.1rem;
+
+            @media (min-width: 360px) {
+              font-size: 1.7rem;
+            }
           }
         }
       }
